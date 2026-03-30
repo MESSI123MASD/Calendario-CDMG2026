@@ -1,0 +1,15 @@
+/* Colores por calendario */
+.cal1 { background-color: #808080 !important; color: white; } /* gris */
+.cal2 { background-color: #000000 !important; color: white; } /* negro */
+.cal3 { background-color: #008000 !important; color: white; } /* verde */
+.cal4 { background-color: #FF0000 !important; color: white; } /* rojo */
+.cal5 { background-color: #FFA500 !important; color: black; } /* naranja */
+.cal6 { background-color: #0000FF !important; color: white; } /* azul */
+.cal7 { background-color: #FFFF00 !important; color: black; } /* amarillo */
+.cal8 { background-color: #8B4513 !important; color: white; } /* café */
+.cal9 { background-color: #800080 !important; color: white; } /* morado */
+
+/* Asegurar legibilidad */
+.cal1:hover, .cal2:hover, .cal3:hover, .cal4:hover, .cal6:hover, .cal8:hover, .cal9:hover { opacity: 0.9; }
+.cal5:hover, .cal7:hover { opacity: 0.9; }
+

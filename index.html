@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendario</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="calendar-colors.css">
+</head>
+
+<body>
+
+<div class="calendar-container">
+
+
+
+  <div class="header">
+    <h1 class="calendar-title">Calendario 2026</h1>
+    <input type="text" class="search-input" placeholder="🔍 Buscar eventos...">
+    <div id="globalSearchResults" style="max-height: 300px; overflow-y: auto; background: white; border: 1px solid #ddd; border-radius: 8px; margin-top: 10px; display: none; padding: 10px;"></div>
+  </div>
+
+
+  <div class="month-nav">
+    <button class="prev-month">‹</button>
+    <h2 class="month-title">Enero 2026</h2>
+    <button class="next-month">›</button>
+  </div>
+
+
+  <div class="calendar">
+
+    <!-- Nombres de días -->
+    <div class="day-name">Dom</div>
+    <div class="day-name">Lun</div>
+    <div class="day-name">Mar</div>
+    <div class="day-name">Mié</div>
+    <div class="day-name">Jue</div>
+    <div class="day-name">Vie</div>
+    <div class="day-name">Sáb</div>
+  </div>
+
+  <script src="calendar.js"></script>
+
+</div>
+
+</body>
+</html>

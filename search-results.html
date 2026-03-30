@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultados de Búsqueda - Calendario 2026</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="calendar-colors.css">
+</head>
+<body>
+<div class="calendar-container">
+  <div class="header">
+    <h1>Resultados de Búsqueda</h1>
+    <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar eventos...">
+  </div>
+  <div id="searchResults"></div>
+</div>
+<script>
+let allEvents = [];
+fetch('events.json').then(r=>r.json()).then(data => {
+  allEvents = data.map(e => ({...e, date: e.inicio.slice(0,10) || e.inicio.slice(0,4)+'-'+e.inicio.slice(4,6)+'-'+e.inicio.slice(6,8)}));
+  document.getElementById('searchInput').addEventListener('input', updateResults);
+  updateResults();
+});
+
+function updateResults() {
+  const term = document.getElementById('searchInput').value.toLowerCase();
+  const results = allEvents.filter(e => e.titulo.toLowerCase().includes(term));
+  const container = document.getElementById('searchResults');
+  container.innerHTML = '';
+  
+  if (term) {
+    const byDate = {};
+    results.forEach(e => {
+      const date = e.date;
+      if (!byDate[date]) byDate[date] = [];
+      byDate[date].push(e);
+    });
+    
+    const dates = Object.keys(byDate).sort();
+    dates.forEach(date => {
+      const dayDiv = document.createElement('div');
+      dayDiv.style = 'margin: 20px 0; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);';
+      dayDiv.innerHTML = `<h3 style="margin: 0 0 10px 0; color: #333;">${date}</h3>`;
+      byDate[date].sort((a,b) => a.titulo.localeCompare(b.titulo)).forEach(e => {
+        const calId = e.calendario.match(/Calendario(\d)/)?.[1] || '1';
+        const eventDiv = document.createElement('div');
+        eventDiv.className = `event cal${calId}`;
+        eventDiv.style.marginBottom = '5px';
+        eventDiv.textContent = e.titulo;
+        dayDiv.appendChild(eventDiv);
+      });
+      container.appendChild(dayDiv);
+    });
+    if (dates.length === 0) {
+      container.innerHTML = '<p style="text-align: center; color: #666;">No se encontraron eventos</p>';
+    }
+  }
+}
+</script>
+</body>
+</html>
+
