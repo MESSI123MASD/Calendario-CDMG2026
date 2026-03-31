@@ -8,6 +8,16 @@
   },
 
 
+
+   {
+    "calendario": "Calendario1",
+    "titulo": "Reunión de Avance CDMG",
+    "inicio": "20261005",
+    "fin": "20261005",
+    "descripcion": ""
+  },
+
+
   {
   "calendario": "Calendario1",
   "titulo": "RG-Miércoles",
@@ -82,6 +92,12 @@
     "week": 3
   }
 },
+
+
+
+
+
+
 
 {
     "calendario": "Calendario1",
