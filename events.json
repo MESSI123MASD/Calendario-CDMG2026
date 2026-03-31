@@ -6,6 +6,107 @@
     "fin": "20260602",
     "descripcion": ""
   },
+
+
+  {
+  "calendario": "Calendario1",
+  "titulo": "RG-Miércoles",
+  "inicio": "20260107",    
+  "fin": "20260107",        
+  "descripcion": "Reunión semanal",
+  "recurrence": "weekly"   
+},
+
+
+{
+  "calendario": "Calendario1",
+  "titulo": "RG-Miércoles-Misiones",
+  "inicio": "20260114",          
+  "fin": "20260114",
+  "descripcion": "Reunión mensual",
+  "recurrence": "monthly_weekday",
+  "weekday": 3,                  
+  "week": 2                     
+},
+
+
+{
+  "calendario": "Calendario1",
+  "titulo": "RG- Domingo",
+  "inicio": "20260104",        
+  "fin": "20260104",
+  "descripcion": "Evento mensual",
+  "recurrence": "weekly"
+
+},
+
+{
+  "calendario": "Calendario CDMG 2026",
+  "titulo": "Charlas Bautismos",
+  "inicio": "20260411",
+  "fin": "20260411",
+  "descripcion": "",
+  "recurrence": {
+    "type": "monthly_weekday",
+    "interval": 2,
+    "weekday": 6,
+    "week": 2
+  }
+},
+
+
+{
+  "calendario": "Calendario CDMG 2026",
+  "titulo": "Charlas PDN",
+  "inicio": "20260613",
+  "fin": "20260613",
+  "descripcion": "",
+  "recurrence": {
+    "type": "monthly_weekday",
+    "interval": 1,
+    "weekday": 6,
+    "week": 2
+  }
+},
+
+{
+  "calendario": "Calendario CDMG 2026",
+  "titulo": "PDN",
+  "inicio": "20260120",
+  "fin": "20260120",
+  "descripcion": "",
+  "recurrence": {
+    "type": "monthly_weekday",
+    "interval": 1,
+    "weekday": 3,
+    "week": 3
+  }
+},
+
+{
+    "calendario": "Calendario1",
+    "titulo": "Bautismos",
+    "inicio": "20260225",
+    "fin": "20260225",
+    "recurrence": {
+      "type": "monthly_last_weekday",
+      "interval": 2,
+      "weekday": 3
+    }
+  },
+
+
+
+{
+  "calendario": "Calendario1",
+  "titulo": "RG-CDS",
+  "inicio": "20260104",        
+  "fin": "20260104",
+  "descripcion": "Evento mensual",
+  "recurrence": "monthly_weekday",
+  "weekday": 0,
+  "week": 1
+},
   {
     "calendario": "Calendario1",
     "titulo": "Graduaciones MFC",
