@@ -18,6 +18,21 @@
   },
 
 
+
+  {
+  "calendario": "Calendario CDMG 2026",
+  "titulo": "RGL",
+  "inicio": "20260427",
+  "fin": "20260427",
+  "descripcion": "",
+  "recurrence": {
+    "type": "monthly_weekday",
+    "interval": 1,
+    "weekday": 1,
+    "week": 4
+  }
+},
+
   {
   "calendario": "Calendario1",
   "titulo": "RG-Miércoles",
